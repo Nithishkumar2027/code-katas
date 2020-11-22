@@ -20,7 +20,19 @@ const duplicateEncode = (word) => {
     }
     return paranthesis;
 }
-console.log(duplicateEncode('din')); 651
-console.log(duplicateEncode('recede')); 651
-console.log(duplicateEncode('Success')); 651
-console.log(duplicateEncode('(( @')); 651
+
+// Solution #2
+function duplicateEncode(word) {
+    return word
+        .toLowerCase()
+        .split('')
+        .map(function (value, index, array) {
+            return array.indexOf(value) == array.lastIndexOf(value) ? '(' : ')'
+        })
+        .join('');
+}
+
+console.log(duplicateEncode('din')); // (((
+console.log(duplicateEncode('recede')); // ()()()
+console.log(duplicateEncode('Success')); // )())())
+console.log(duplicateEncode('(( @')); // ))((
