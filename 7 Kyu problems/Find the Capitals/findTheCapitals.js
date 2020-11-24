@@ -28,4 +28,14 @@ function capitals(word) {
     }, [])
 }
 
+// Solution #4 (Best way)
+function capitals(word) {
+    return Array.prototype.reduce.call(word, (indices, letter, index) => {
+        if (letter.match(/[A-Z]/)) {
+            indices.push(index)
+        }
+        return indices;
+    }, [])
+}
+
 console.log(capitals('CodEWaRs'));
