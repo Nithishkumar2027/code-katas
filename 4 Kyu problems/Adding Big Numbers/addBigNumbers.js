@@ -43,9 +43,7 @@ function add(num1, num2) {
     return result
 }
 
-
-
+// Tests
 console.log(add('1', '1'));
 console.log(add('2750', '33705'));
 console.log(add('63829983432984289347293874', '90938498237058927340892374089'));
-console.log(274 - 242);
