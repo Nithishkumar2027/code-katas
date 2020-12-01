@@ -22,7 +22,7 @@ String.prototype.toJadenCase = function () {
 
 // Solution #2
 String.prototype.toJadenCase = function () {
-    return this.toString().split(' ').map(word => word[0].toUpperCase() + word.substr(1)).join(' ')
+    return this.split(' ').map(word => word[0].toUpperCase() + word.substr(1)).join(' ')
 };
 
 
